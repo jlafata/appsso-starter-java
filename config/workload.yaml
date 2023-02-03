@@ -16,7 +16,7 @@ spec:
       ref:
         apiVersion: services.apps.tanzu.vmware.com/v1alpha1
         kind: ResourceClaim
-        name: appsso-acme-fitness
+        name: appsso-starter-java
   source:
     git:
       url: https://github.com/jlafata/appsso-starter-java.git
