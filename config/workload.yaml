@@ -11,12 +11,12 @@ spec:
   params:
     - name: live-update
       value: "true"
-  serviceClaims:
-    - name: appsso-starter-java
-      ref:
-        apiVersion: services.apps.tanzu.vmware.com/v1alpha1
-        kind: ResourceClaim
-        name: appsso-acme-fitness
+#  serviceClaims:
+#    - name: appsso-starter-java
+#      ref:
+#        apiVersion: services.apps.tanzu.vmware.com/v1alpha1
+#        kind: ResourceClaim
+#        name: appsso-acme-fitness
   source:
     git:
       url: https://github.com/jlafata/appsso-starter-java.git
