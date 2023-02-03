@@ -11,9 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.security.authentication.AnonymousAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
+//import org.springframework.security.authentication.AnonymousAuthenticationToken;
+//import org.springframework.security.core.Authentication;
+//import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.GenericFilterBean;
 
 // see: https://www.baeldung.com/spring-security-redirect-logged-in#authentication-verification
@@ -42,11 +42,12 @@ public class AuthenticationCheckFilter extends GenericFilterBean {
 	}
 
 	private boolean isAuthenticated() {
-		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-		if (authentication == null || AnonymousAuthenticationToken.class.
-				isAssignableFrom(authentication.getClass())) {
-			return false;
-		}
-		return authentication.isAuthenticated();
+//		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//		if (authentication == null || AnonymousAuthenticationToken.class.
+//				isAssignableFrom(authentication.getClass())) {
+//			return false;
+//		}
+//		return authentication.isAuthenticated();
+		return true;
 	}
 }
