@@ -11,10 +11,10 @@ public class AuthenticatedHomeController {
 	// see: https://www.baeldung.com/spring-security-openid-connect#1-accessing-user-information
 	@GetMapping("/authenticated/home")
 	public String authenticatedHome(Model model
-//			, @AuthenticationPrincipal OidcUser authenticatedUser
+			, @AuthenticationPrincipal OidcUser authenticatedUser
 	) {
 		model.addAttribute("username"
-//				, authenticatedUser.getClaims().get("sub")
+				, authenticatedUser.getClaims().get("sub")
 		);
 		return "authenticated-home.html";
 	}
